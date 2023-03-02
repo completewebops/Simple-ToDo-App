@@ -13,25 +13,25 @@ function renderTodos() {
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.checked = todo.completed;
-    checkbox.addEventListener('change', function() {
+    checkbox.addEventListener('change', function () {
       todo.completed = !todo.completed;
       saveTodos();
       renderTodos();
     });
     const label = document.createElement('label');
     label.textContent = todo.title;
-    label.addEventListener('dblclick', function() {
+    label.addEventListener('dblclick', function () {
       label.contentEditable = true;
       label.focus();
     });
-    label.addEventListener('blur', function() {
+    label.addEventListener('blur', function () {
       todo.title = label.textContent;
       saveTodos();
       label.contentEditable = false;
     });
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
-    deleteButton.addEventListener('click', function() {
+    deleteButton.addEventListener('click', function () {
       todos.splice(i, 1);
       saveTodos();
       renderTodos();
@@ -59,7 +59,7 @@ function loadTodos() {
   }
 }
 
-todoForm.addEventListener('submit', function(event) {
+todoForm.addEventListener('submit', function (event) {
   event.preventDefault();
   const todoTitle = todoInput.value.trim();
   if (todoTitle) {
