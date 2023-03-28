@@ -1,2 +1,2 @@
-Simple ToDo App with delete, edit, cookie storage on local device.
+Simple ToDo App in Javascript with delete, edit, cookie storage on local device.
 Complete with css.
